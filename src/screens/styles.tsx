@@ -31,6 +31,14 @@ export const styles = StyleSheet.create({
         borderRadius: 5,
         width: '100%',
     },
+    inputError: {
+        margin: 4,
+        borderWidth: 2,
+        borderColor: 'red',
+        padding: 15,
+        borderRadius: 5,
+        width: '100%',
+    },
     button: {
         backgroundColor: '#000',
         marginTop: 15,
@@ -42,5 +50,25 @@ export const styles = StyleSheet.create({
         color: '#fff',
         fontSize: 15,
         fontWeight: 'bold',
+    },
+    buttonUpload: {
+        backgroundColor: '#969696',
+        marginTop: 15,
+        padding: 17,
+        borderRadius: 5,
+        width: '100%',
+    },
+    radioGroup: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        width: '100%',
+        marginBottom: 5,
+        marginTop: 10,
+        padding: 10,
+    },
+    radioButton: {
+        flexDirection: 'row',
+        alignItems: 'center',
     },
 })
