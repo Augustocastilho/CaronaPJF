@@ -5,7 +5,6 @@ import { LoggedOut } from './src/screens/LoggedOut';
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      {/* <LoggedOut /> */}
       <Routes />
     </SafeAreaView>
   );

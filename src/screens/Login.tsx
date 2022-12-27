@@ -9,6 +9,10 @@ export function Login() {
     const toggleSwitch = () => setIsEnabled(previousState => !previousState);
     const navigation = useNavigation<any>();
     
+    function navigateToHome() {
+        navigation.navigate('Home', { userType: isEnabled ? "passenger" : "driver" });
+    }
+
     return (
         <View style={styles.container}>
             <TouchableOpacity onPress={() => {
@@ -30,8 +34,11 @@ export function Login() {
                 </View>
                 <TextInput placeholder="E-mail" style={styles.input} />
                 <TextInput placeholder="Senha" style={styles.input} secureTextEntry={true}/>
-                <TouchableOpacity onPress={() => { }} style={styles.button}>
+                <TouchableOpacity onPress={() => navigateToHome()} style={styles.button}>
                     <Text style={styles.buttonText}>ENTRAR</Text>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => { }} style={styles.forgotPassword}>
+                    <Text style={styles.forgotPasswordText}>Esqueci a senha</Text>
                 </TouchableOpacity>
             </View>
         </View>

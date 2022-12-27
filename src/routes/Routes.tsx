@@ -1,5 +1,6 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+import { Home } from "../screens/Home";
 
 import { LoggedOut } from "../screens/LoggedOut";
 import { Login } from "../screens/Login";
@@ -14,6 +15,7 @@ export default function Routes() {
                 <AppStack.Screen name="LoggedOut" component={LoggedOut} options={{headerShown: false}}/>
                 <AppStack.Screen name="Login" component={Login} options={{headerShown: false}}/>
                 <AppStack.Screen name="Register" component={Register} options={{headerShown: false}}/>
+                <AppStack.Screen name="Home" component={Home} options={{headerShown: false}}/>
             </AppStack.Navigator>
         </NavigationContainer>
     );

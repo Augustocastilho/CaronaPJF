@@ -52,7 +52,7 @@ export const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     buttonUpload: {
-        backgroundColor: '#969696',
+        backgroundColor: '#C6C4C4',
         marginTop: 15,
         padding: 17,
         borderRadius: 5,
@@ -69,6 +69,44 @@ export const styles = StyleSheet.create({
     },
     radioButton: {
         flexDirection: 'row',
+        alignItems: 'center',
+    },
+    forgotPassword: {
+        width: '100%',
+        padding: 20,
+        alignItems:'flex-start',
+    },
+    forgotPasswordText: {
+        color: '#C6C4C4',
+        fontSize: 14,
+        fontWeight: 'bold',
+        textDecorationLine: 'underline',
+    },
+    headerHome: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+    },
+    history: {
+        width: '100%',
+        padding: 10,
+        alignItems:'center',
+    },
+    historyText: {
+        color: '#C6C4C4',
+        fontSize: 16,
+        fontWeight: 'bold',
+        textDecorationLine: 'underline',
+    },
+    containerHome: {
+        flex: 1,
+        justifyContent: 'center',
+    },
+    buttonRounded: {
+        backgroundColor: '#000',
+        padding: 17,
+        borderRadius: 50,
+        width: '100%',
         alignItems: 'center',
     },
 })
