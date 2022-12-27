@@ -82,7 +82,7 @@ export const styles = StyleSheet.create({
         fontWeight: 'bold',
         textDecorationLine: 'underline',
     },
-    headerHome: {
+    header: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
@@ -108,5 +108,35 @@ export const styles = StyleSheet.create({
         borderRadius: 50,
         width: '100%',
         alignItems: 'center',
+    },
+    containerProfile: {
+        flex: 1,
+        paddingTop: 40,
+        alignItems: 'center',
+    },
+    image: {
+        width: 125,
+        height: 125,
+        borderRadius: 60,
+        marginBottom: 10,
+    },
+    name: {
+        fontSize: 20,
+        color: '#000',
+        fontWeight: 'bold',
+    },
+    fields: {
+        width: '100%',
+        marginTop: 40,
+    },
+    field: {
+        width: '100%',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        padding: 10,
+    },
+    fieldsText: {
+        fontSize: 17,
     },
 })
