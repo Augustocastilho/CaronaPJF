@@ -1,0 +1,25 @@
+export const DRIVER_USERS = [
+    {
+        id: 1001,
+        email: 'antoniosouzajf@gmail.com',
+        password: '123456',
+        name: 'Antônio Souza',
+        phone: '(00) 00000-0000',
+        birthDate: '01/01/1990',
+        sex: 'M',
+        document: '11.111.111',
+        cpf: '000.000.000-00',
+        license: '000000000',
+        car: {
+            renavam: '000000000',
+            brand: 'Volkswagen',
+            year: 2012,
+            model: 'Gol',
+            color: 'Vermelho',
+            plate: 'ABC0000',
+            city: 'Juiz de Fora',
+            state: 'Minas Gerais',
+        },
+        profile_picture: '../assets/images/antonio-souza-1001.png',
+    },
+]
