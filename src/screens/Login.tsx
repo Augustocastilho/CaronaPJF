@@ -21,7 +21,7 @@ const schema = yup.object().shape({
 });
 
 export function Login() {
-    const [isEnabled, setIsEnabled] = useState(false);
+    const [isDriver, setIsEnabled] = useState(false);
     const toggleSwitch = () => setIsEnabled(previousState => !previousState);
     const navigation = useNavigation<any>();
 
@@ -41,7 +41,7 @@ export function Login() {
     };
 
     function validateUser(data: FormData) {
-        const userType = isEnabled ? "passenger" : "driver";
+        const userType = isDriver ? "driver" : "passenger";
         const user = userType === "driver" ? DRIVER_USERS.find(user => user.email === data.email) : PASSENGER_USERS.find(user => user.email === data.email);
         if (user) {
             if (user.password === data.password) {
@@ -57,7 +57,7 @@ export function Login() {
     }
 
     function navigateToHome(user: Object) {
-        const userType = isEnabled ? "passenger" : "driver";
+        const userType = isDriver ? "driver" : "passenger";
         navigation.navigate('Home', { userType: userType, user: user });
     }
 
@@ -76,7 +76,7 @@ export function Login() {
                         trackColor={{ false: "#767577", true: "#767577" }}
                         ios_backgroundColor="#3e3e3e"
                         onValueChange={toggleSwitch}
-                        value={isEnabled}
+                        value={!isDriver}
                     />
                     <Text>PASSAGEIRO</Text>
                 </View>
