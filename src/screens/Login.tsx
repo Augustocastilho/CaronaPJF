@@ -90,11 +90,12 @@ export function Login() {
                             onBlur={onBlur}
                             onChangeText={onChange}
                             value={value}
+                            keyboardType="email-address"
                         />
                     )}
                     name="email"
                 />
-                {errors.email && <Text style={{color: 'red'}}>{errors.email.message}</Text>}
+                {errors.email && <Text style={{ color: 'red' }}>{errors.email.message}</Text>}
 
                 <Controller
                     control={control}
@@ -110,7 +111,7 @@ export function Login() {
                     )}
                     name="password"
                 />
-                {errors.password && <Text style={{color: 'red'}}>{errors.password.message}</Text>}
+                {errors.password && <Text style={{ color: 'red' }}>{errors.password.message}</Text>}
 
                 <TouchableOpacity onPress={handleSubmit(onSubmit)} style={styles.button}>
                     <Text style={styles.buttonText}>ENTRAR</Text>
@@ -126,7 +127,7 @@ export function Login() {
                 contentContainerStyle={{ borderRadius: 25 }}
                 title="Erro"
                 titleStyle={{ color: '#000', fontWeight: 'bold', fontSize: 15, textAlign: 'center' }}
-                message = {msg}
+                message={msg}
                 messageStyle={{ color: '#000', fontWeight: 'bold', fontSize: 20, textAlign: 'center' }}
                 closeOnTouchOutside={true}
                 closeOnHardwareBackPress={false}
