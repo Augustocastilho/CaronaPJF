@@ -6,6 +6,6 @@ export const PASSENGER_USERS = [
         name: 'Cristina Pinheiro',
         phone: '(00) 00000-0000',
         birthDate: '10/05/1999',
-        profile_picture: '../assets/images/cristina-pinheiro-2001.png',
+        profile_picture: require('../../assets/cristina-pinheiro-2001.png'),
     }
 ]

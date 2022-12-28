@@ -34,7 +34,7 @@ export function Login() {
         const user = userType === "driver" ? DRIVER_USERS.find(user => user.email === data.email) : PASSENGER_USERS.find(user => user.email === data.email);
         if (user) {
             if (user.password === data.password) {
-                navigateToHome(user.id);
+                navigateToHome(user);
             } else {
                 alert("Senha incorreta");
             }
@@ -43,10 +43,9 @@ export function Login() {
         }
     }
 
-    function navigateToHome(userId: number) {
+    function navigateToHome(user: Object) {
         const userType = isEnabled ? "passenger" : "driver";
-        console.log(userId);
-        navigation.navigate('Home', { userType: userType, user: userId });
+        navigation.navigate('Home', { userType: userType, user: user });
     }
 
     return (

@@ -5,7 +5,7 @@ export const DRIVER_USERS = [
         password: '123456',
         name: 'Antônio Souza',
         phone: '(00) 00000-0000',
-        birthDate: '01/01/1990',
+        birthDate: '01/08/1967',
         sex: 'M',
         document: '11.111.111',
         cpf: '000.000.000-00',
@@ -20,6 +20,6 @@ export const DRIVER_USERS = [
             city: 'Juiz de Fora',
             state: 'Minas Gerais',
         },
-        profile_picture: '../assets/images/antonio-souza-1001.png',
+        profile_picture: require('../../assets/antonio-souza-1001.png'),
     },
 ]

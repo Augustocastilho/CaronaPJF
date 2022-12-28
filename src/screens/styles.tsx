@@ -139,4 +139,11 @@ export const styles = StyleSheet.create({
     fieldsText: {
         fontSize: 17,
     },
+    subTitle: {
+        fontSize: 20,
+        color: '#C6C4C4',
+        fontWeight: 'bold',
+        marginTop: 20,
+        marginLeft: 10,
+    },
 })

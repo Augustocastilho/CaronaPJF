@@ -6,10 +6,10 @@ import Icon from 'react-native-vector-icons/AntDesign';
 export function Home({ route }: { route: any}) {
     const navigation = useNavigation<any>();
     const userType = route.params.userType;
-    const userId = route.params.user;
+    const user = route.params.user;
     
     function navigateToProfile() {
-        navigation.navigate('Profile');
+        navigation.navigate('Profile', { userType: userType, user: user });
     }
 
     return (
