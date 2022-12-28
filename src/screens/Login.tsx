@@ -8,6 +8,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { DRIVER_USERS } from '../utils/driverUsers';
 import { PASSENGER_USERS } from '../utils/passengerUsers';
+import AwesomeAlert from 'react-native-awesome-alerts';
 
 interface FormData {
     email: string;
@@ -29,6 +30,16 @@ export function Login() {
     });
     const onSubmit = (data: FormData) => validateUser(data);
 
+    const [state, setState] = React.useState(false);
+    const [msg, setMsg] = React.useState('');
+    const showAlert = () => {
+        setState(true);
+    };
+
+    const hideAlert = () => {
+        setState(false);
+    };
+
     function validateUser(data: FormData) {
         const userType = isEnabled ? "passenger" : "driver";
         const user = userType === "driver" ? DRIVER_USERS.find(user => user.email === data.email) : PASSENGER_USERS.find(user => user.email === data.email);
@@ -36,10 +47,12 @@ export function Login() {
             if (user.password === data.password) {
                 navigateToHome(user);
             } else {
-                alert("Senha incorreta");
+                setMsg('Senha incorreta');
+                showAlert();
             }
         } else {
-            alert("Usuário não encontrado");
+            setMsg('Usuário não encontrado');
+            showAlert();
         }
     }
 
@@ -106,6 +119,26 @@ export function Login() {
                     <Text style={styles.forgotPasswordText}>Esqueci a senha</Text>
                 </TouchableOpacity>
             </View>
+
+            <AwesomeAlert
+                show={state}
+                showProgress={false}
+                contentContainerStyle={{ borderRadius: 25 }}
+                title="Erro"
+                titleStyle={{ color: '#000', fontWeight: 'bold', fontSize: 15, textAlign: 'center' }}
+                message = {msg}
+                messageStyle={{ color: '#000', fontWeight: 'bold', fontSize: 20, textAlign: 'center' }}
+                closeOnTouchOutside={true}
+                closeOnHardwareBackPress={false}
+                showCancelButton={false}
+                showConfirmButton={true}
+                confirmText="OK"
+                confirmButtonColor="#fff"
+                confirmButtonTextStyle={{ color: '#000', fontWeight: 'bold', fontSize: 20 }}
+                onConfirmPressed={() => {
+                    hideAlert();
+                }}
+            />
         </View>
     )
 }
