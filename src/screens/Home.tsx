@@ -12,6 +12,10 @@ export function Home({ route }: { route: any}) {
         navigation.navigate('Profile', { userType: userType, user: user });
     }
 
+    function navigateToRun() {
+        navigation.navigate('Run', { userType: userType, user: user });
+    }
+
     return (
         <View style={styles.container}>
             <View style={styles.header}>
@@ -23,7 +27,7 @@ export function Home({ route }: { route: any}) {
                 </TouchableOpacity>
             </View>
             <View style={styles.containerHome}>
-                <TouchableOpacity onPress={() => { }} style={styles.buttonRounded}>
+                <TouchableOpacity onPress={() => { navigateToRun() }} style={styles.buttonRounded}>
                     <Text style={styles.buttonText}>{userType === "driver" ? "VER SOLICITAÇÕES" : "NOVA CORRIDA"}</Text>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => { }} style={styles.history}>
