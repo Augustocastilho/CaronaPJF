@@ -247,4 +247,41 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         marginTop: 10,
     },
+    optionTouchable1:{
+        width: '120%',
+        backgroundColor: '#E8E8E8',
+        alignSelf: 'center',
+        alignContent: 'center',
+        alignItems: 'center',
+    },
+    optionTouchable2:{
+        width: '120%',
+        backgroundColor: '#fff',
+        alignSelf: 'center',
+        alignContent: 'center',
+        alignItems: 'center',
+    },
+    optionContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        width: '85%',
+        margin: 20,
+    },
+    optionInfo: {
+        alignItems: 'flex-start',
+    },
+    optionPrice: {
+        fontSize: 24,
+        fontWeight: 'bold',
+    },
+    optionTitle: {
+        fontSize: 16,
+        color: '#000',
+        fontWeight: 'bold',
+    },
+    optionText: {
+        fontSize: 14,
+    },
+
 })

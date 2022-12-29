@@ -4,13 +4,13 @@ import { styles } from './styles'
 import { useNavigation } from '@react-navigation/native';
 import MapView, { Marker, Region, PROVIDER_GOOGLE } from 'react-native-maps';
 import mapStyle from '../utils/mapStyle.json';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import Icon from 'react-native-vector-icons/Feather';
 
-export function Run() {
+export function SelectRun() {
     const navigation = useNavigation<any>();
 
-    function navigateToRunInfo() {
-        navigation.navigate('RunInfo');
+    function navigateToRun() {
+        navigation.navigate('Run');
     }
 
     const [region, setRegion] = React.useState<Region>(
@@ -44,22 +44,6 @@ export function Run() {
         setRegion({ ...region });
     }
 
-    // React.useEffect(() => {
-    //     Geolocation.getCurrentPosition(
-    //         (position) => {
-    //             setRegion({
-    //                 ...region,
-    //                 latitude: position.coords.latitude,
-    //                 longitude: position.coords.longitude,
-    //             });
-    //         },
-    //         (error) => {
-    //             console.log(error.code, error.message);
-    //         },
-    //         { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
-    //     );
-    // }, []);
-
     return (
         <View style={{ flex: 1, width: '100%', height: '100%' }}>
             <MapView
@@ -80,42 +64,44 @@ export function Run() {
                     />
                 ))}
             </MapView>
-            <TouchableOpacity onPress={() => { navigateToRunInfo() }} style={styles.swipe}>
+            <View style={styles.swipe}>
                 <View style={styles.swipeButton} />
                 <View style={styles.header}>
-                    <Text style={styles.swipeTitle}>
-                        Antônio está a caminho
-                    </Text>
-                    <View style={styles.containerTime}>
-                        <Text style={styles.time}>
-                            5
-                        </Text>
-                        <Text style={styles.timeText}>
-                            min
+                    <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 5, marginTop: 5 }}>
+                        <Icon name='credit-card' size={25} color='#000' style={{ marginRight: 5 }} onPress={() => { }} />
+                        <Text style={styles.swipeTitle}>
+                            MasterCard 1111
                         </Text>
                     </View>
+                    <Icon name='edit' size={25} color='#000' />
                 </View>
 
-                <View style={styles.line} />
+                <View style={{ margin: 7 }}></View>
 
-                <View style={styles.containerModal}>
-                    <View style={styles.infoDriver}>
-                        <Text>Antônio Souza</Text>
-                        <Text style={styles.plate}>ABC0000</Text>
-                        <Text>Gol - Vermelho</Text>
+                <TouchableOpacity onPress={() => navigateToRun()} style={styles.optionTouchable1}>
+                    <View style={styles.optionContainer}>
+                        <View style={styles.optionInfo}>
+                            <Text style={styles.optionTitle}>Simples</Text>
+                            <Text style={styles.optionText}>Chegada: 5 min</Text>
+                        </View>
+                        <Text style={styles.optionPrice}>R$ 21,50</Text>
                     </View>
-                    <View>
-                        <Image source={require('../../assets/antonio-souza-1001.png')} style={styles.imageDriver} />
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => { }} style={styles.optionTouchable2}>
+                    <View style={styles.optionContainer}>
+                        <View style={styles.optionInfo}>
+                            <Text style={styles.optionTitle}>Confort</Text>
+                            <Text style={styles.optionText}>Chegada: 4 min</Text>
+                        </View>
+                        <Text style={styles.optionPrice}>R$ 27,65</Text>
                     </View>
-                </View>
-
-                <View style={styles.messageContainer}>
-                    <TextInput style={styles.messageInput} placeholder='Enviar uma mensagem' />
-                    <TouchableOpacity onPress={() => { }}>
-                        <Icon name='send-circle-outline' size={45} color='#C4C4C4' />
+                </TouchableOpacity>
+                <View style={{ width: '100%', justifyContent: 'flex-end', alignItems: 'flex-end' }}>
+                    <TouchableOpacity onPress={() =>  { navigation.goBack(); }}>
+                        <Text>Voltar</Text>
                     </TouchableOpacity>
                 </View>
-            </TouchableOpacity>
+            </View>
         </View>
     )
 }

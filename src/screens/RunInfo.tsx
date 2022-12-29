@@ -20,6 +20,7 @@ export function RunInfo() {
 
     const hideAlertAndClosePage = () => {
         setState(false);
+        navigation.navigate('SelectRun')
     };
 
     return (
