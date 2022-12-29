@@ -11,6 +11,10 @@ export function Run({ route }: { route: any }) {
     const userType = route.params.userType;
     const user = route.params.user;
 
+    function navigateToRunInfo() {
+        navigation.navigate('RunInfo');
+    }
+
     const [region, setRegion] = React.useState<Region>(
         {
             latitude: -21.77681,
@@ -78,7 +82,7 @@ export function Run({ route }: { route: any }) {
                     />
                 ))}
             </MapView>
-            <TouchableOpacity onPress={() => { }} style={styles.swipe}>
+            <TouchableOpacity onPress={() => { navigateToRunInfo() }} style={styles.swipe}>
                 <View style={styles.swipeButton} />
                 <View style={styles.header}>
                     <Text style={styles.swipeTitle}>

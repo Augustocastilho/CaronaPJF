@@ -50,6 +50,7 @@ export const styles = StyleSheet.create({
         color: '#fff',
         fontSize: 15,
         fontWeight: 'bold',
+        textTransform: 'uppercase',
     },
     buttonUpload: {
         backgroundColor: '#E8E8E8',
@@ -239,5 +240,11 @@ export const styles = StyleSheet.create({
         paddingLeft: 20,
         borderRadius: 25,
         width: '90%',
+    },
+    stars: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginTop: 10,
     },
 })

@@ -8,6 +8,7 @@ import { Register } from "../screens/Register";
 import { Profile } from "../screens/Profile";
 import { EditProfile } from "../screens/EditProfile";
 import { Run } from "../screens/Run";
+import { RunInfo } from "../screens/RunInfo";
 
 const AppStack = createStackNavigator();
 
@@ -22,6 +23,7 @@ export default function Routes() {
                 <AppStack.Screen name="Profile" component={Profile} options={{headerShown: false}}/>
                 <AppStack.Screen name="EditProfile" component={EditProfile} options={{headerShown: false}}/>
                 <AppStack.Screen name="Run" component={Run} options={{headerShown: false}}/>
+                <AppStack.Screen name="RunInfo" component={RunInfo} options={{headerShown: false}}/>
             </AppStack.Navigator>
         </NavigationContainer>
     );
