@@ -17,9 +17,9 @@ export function EditProfile({ route }: { route: any }) {
     const [passwordValue, setPasswordValue] = React.useState(user.password);
     const [phoneValue, setPhoneValue] = React.useState(user.phone);
     const [birthDateValue, setBirthDateValue] = React.useState(user.birthDate);
-    const [renavamValue, setRenavamValue] = React.useState(user.car.renavam);
-    const [modelValue, setModelValue] = React.useState(user.car.model);
-    const [brandValue, setBrandValue] = React.useState(user.car.brand);
+    const [renavamValue, setRenavamValue] = React.useState(userType === "driver" ? user.car.renavam : "");
+    const [modelValue, setModelValue] = React.useState(userType === "driver" ? user.car.model : "");
+    const [brandValue, setBrandValue] = React.useState(userType === "driver" ? user.car.brand : "");
 
     const showAlert = () => {
         setState(true);
