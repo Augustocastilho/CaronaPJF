@@ -5,8 +5,9 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { useNavigation } from '@react-navigation/native';
 import AwesomeAlert from 'react-native-awesome-alerts';
 
-export function RunInfo() {
+export function RaceInfo({ route }: { route: any }) {
     const navigation = useNavigation<any>();
+    const userType = route.params.userType;
 
     const [state, setState] = React.useState(false);
 
@@ -20,7 +21,7 @@ export function RunInfo() {
 
     const hideAlertAndClosePage = () => {
         setState(false);
-        navigation.navigate('SelectRun')
+        navigation.navigate('SelectRace', { userType: userType })
     };
 
     return (

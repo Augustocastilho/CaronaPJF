@@ -12,8 +12,8 @@ export function Home({ route }: { route: any}) {
         navigation.navigate('Profile', { userType: userType, user: user });
     }
 
-    function navigateToSelectRun() {
-        navigation.navigate('SelectRun');
+    function navigateToSelectRace() {
+        navigation.navigate('SelectRace', { userType: userType });
     }
 
     return (
@@ -27,7 +27,7 @@ export function Home({ route }: { route: any}) {
                 </TouchableOpacity>
             </View>
             <View style={styles.containerHome}>
-                <TouchableOpacity onPress={() => { navigateToSelectRun() }} style={styles.buttonRounded}>
+                <TouchableOpacity onPress={() => { navigateToSelectRace() }} style={styles.buttonRounded}>
                     <Text style={styles.buttonText}>{userType === "driver" ? "VER SOLICITAÇÕES" : "NOVA CORRIDA"}</Text>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => { }} style={styles.history}>

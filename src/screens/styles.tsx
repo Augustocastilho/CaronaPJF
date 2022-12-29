@@ -156,7 +156,7 @@ export const styles = StyleSheet.create({
     swipe: {
         flex: 1,
         width: '100%',
-        height: 300,
+        height: 320,
         backgroundColor: '#fff',
         borderTopLeftRadius: 35,
         borderTopRightRadius: 35,
@@ -224,7 +224,7 @@ export const styles = StyleSheet.create({
         height: 95,
         borderRadius: 60,
     },
-    messageContainer: {
+    containerMessageInput: {
         width: '100%',
         flexDirection: 'row',
         alignItems: 'center',
@@ -233,6 +233,7 @@ export const styles = StyleSheet.create({
         justifyContent: 'space-between',
         marginTop: 15,
         marginRight: 10,
+        marginBottom: 10,
     },
     messageInput: {
         backgroundColor: '#E8E8E8',
@@ -261,7 +262,7 @@ export const styles = StyleSheet.create({
         alignContent: 'center',
         alignItems: 'center',
     },
-    optionContainer: {
+    containerOption: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
@@ -270,6 +271,7 @@ export const styles = StyleSheet.create({
     },
     optionInfo: {
         alignItems: 'flex-start',
+        maxWidth: '70%',
     },
     optionPrice: {
         fontSize: 24,
@@ -282,6 +284,52 @@ export const styles = StyleSheet.create({
     },
     optionText: {
         fontSize: 14,
+    },
+    aceptedRaceHeader: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        width: '100%',
+    },
+    passengerText: {
+        fontSize: 15,
+        fontWeight: 'bold',
+    },
+    imagePassenger: {
+        width: 48,
+        height: 48,
+        borderRadius: 50,
+    },
+    containerChat: {
+        flex: 1,
+        alignItems: 'flex-start',
+        width: '100%',
+        height: '50%',
+    },
+    containerMessage:{
+        flexDirection: 'row',
+        maxWidth: '80%',
+    },
+    containerTextMessage: {
+        backgroundColor: '#E8E8E8',
+        padding: 5,
+        paddingLeft: 10,
+        paddingRight: 10,
+        borderTopStartRadius: 8,
+        borderTopEndRadius: 8,
+        borderBottomEndRadius: 8,
+        alignContent: 'center',
+        alignItems: 'center',
+        alignSelf: 'center',
+    },
+    messageText: {
+        fontSize: 12,
+    },
+    imageMessage: {
+        width: 25,
+        height: 25,
+        borderRadius: 50,
+        marginRight: 10,
     },
 
 })
