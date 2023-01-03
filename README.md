@@ -20,3 +20,11 @@ Caso o usuário opte por uma melhor experiência, é recomendável que ele abra 
 ## Design
 
 As telas foram inicialmente desenvolvidas no Figma, e podem ser acessadas através do link: https://www.figma.com/file/SQPJwYXOpgfAaofQrHPTb2/Carona-PJF?node-id=0%3A1&t=AoSRkErhyOu4E4Zy-1
+
+## Testes
+
+Há dois tipos de usuários no sistema:
+<ul>
+<li> Um passageiro, com email <b>cristina2009@hotmail.com</b> e senha <b>123456</b> e; </li>
+<li> Um motorista, com email <b>antoniosouzajf@gmail.com</b> e senha <b>123456</b>. </li>
+</ul>
